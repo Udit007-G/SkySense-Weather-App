@@ -1,5 +1,10 @@
 # 🌤 SkySense AI — Intelligent Weather Assistant
 
+![React](https://img.shields.io/badge/React-18-blue)
+![Vite](https://img.shields.io/badge/Vite-Fast-purple)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-blue)
+![AI](https://img.shields.io/badge/AI-Groq-orange)
+
 ![SkySense AI Banner](./Images/banner_image.jpeg)
 
 ## 🚀 Overview
