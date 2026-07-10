@@ -49,7 +49,7 @@ pb-3
 cities.map((city,index)=>(
 
 
-<div className="
+<div key={index}className="
 flex
 gap-2
 items-center
