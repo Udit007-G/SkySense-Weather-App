@@ -1,16 +1,250 @@
-# React + Vite
+# 🌤 SkySense AI — Intelligent Weather Assistant
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![SkySense AI Banner](Images/banner_image.jpeg)
 
-Currently, two official plugins are available:
+## 🚀 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+SkySense AI is an AI-powered weather assistant that transforms raw weather data into meaningful decisions.
 
-## React Compiler
+Instead of only showing temperature and forecasts, SkySense combines:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🌦 Real-time weather information
+- 🤖 AI-powered recommendations
+- 🌱 Air Quality analysis
+- ⚖️ City comparison
+- 📊 Weather scoring
+- 📍 Location-based weather detection
 
-## Expanding the Oxlint configuration
+to help users understand what the weather actually means for their daily life.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+---
+
+# ✨ Features
+
+## 🌦 Real-Time Weather Dashboard
+
+- Search any city worldwide
+- Displays:
+  - Temperature
+  - Weather conditions
+  - Humidity
+  - Wind speed
+  - Feels-like temperature
+  - Sunrise/Sunset information
+
+
+## 🤖 SkySense AI Assistant
+
+Powered by Groq AI.
+
+Provides personalized recommendations:
+
+- 👕 Clothing suggestions
+- 🏃 Activity recommendations
+- ❤️ Health advice
+- ⚠️ Weather warnings
+
+
+## 🌱 Air Quality Monitoring
+
+Displays air quality information using AQI data.
+
+Helps users understand:
+
+- Pollution levels
+- Outdoor safety
+- Health impact
+
+
+## 🌤 SkySense Score
+
+A custom weather comfort score from 0-100.
+
+Analyzes:
+
+- Temperature
+- Humidity
+- AQI
+
+and provides an overall weather quality rating.
+
+
+## ⚖️ City Comparison
+
+Compare two cities based on:
+
+- Temperature
+- Humidity
+- Comfort score
+
+and find the better weather condition.
+
+
+## 📍 Location Based Weather
+
+Uses browser geolocation to automatically detect the user's current location.
+
+
+## 🕒 Forecast System
+
+Includes:
+
+- Hourly forecast
+- 5-day forecast
+
+
+## 🎨 Dynamic Weather Experience
+
+The interface changes based on weather:
+
+- ☀️ Sunny themes
+- 🌧 Rain effects
+- ☁️ Cloud animations
+- 🌙 Night mode
+
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- React Icons
+
+
+## APIs
+
+### Weather Data
+
+- WeatherAPI / OpenWeather API
+
+
+### AI Intelligence
+
+- Groq API
+
+
+### Air Quality
+
+- Weather Air Quality API
+
+
+---
+
+# 🏗 Project Structure
+
+```
+src
+│
+├── components
+│   ├── WeatherCard.jsx
+│   ├── Forecast.jsx
+│   ├── HourlyForecast.jsx
+│   ├── AIBox.jsx
+│   ├── AQI.jsx
+│   ├── DecisionPanel.jsx
+│   ├── CompareCities.jsx
+│   ├── SkyScore.jsx
+│   └── WeatherAnimation.jsx
+│
+├── api.js
+├── ai.js
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Udit007-G/SkySense-Weather-App.git
+```
+
+Navigate into the project:
+
+```bash
+cd skysense-ai
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create a `.env` file:
+
+```env
+VITE_WEATHER_API_KEY=your_weather_api_key
+
+VITE_GROQ_API_KEY=your_groq_api_key
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+---
+
+# 🔑 Environment Variables
+
+The project requires:
+
+| Variable | Purpose |
+|---|---|
+| VITE_WEATHER_API_KEY | Fetch weather and forecast data |
+| VITE_GROQ_API_KEY | Generate AI recommendations |
+
+---
+
+
+# 📸 Screenshots
+
+## Main Dashboard
+
+![Dashboard](Images/screenshots/dashboard.png)
+
+
+## AI Weather Assistant
+
+![AI Panel](Images/screenshots/ai-panel.png)
+
+
+## City Comparison
+
+![Comparison](Images/screenshots/comparison.png)
+
+---
+
+# 🔮 Future Improvements
+
+Possible future upgrades:
+
+- 🎙 Voice-based weather assistant
+- 🌍 Weather alerts
+- 📱 Mobile application
+- 📈 Historical weather analysis
+- 🧠 More advanced AI personalization
+- 🌐 Multi-language support
+
+
+---
+
+# 👨‍💻 Author
+
+Built with ❤️ for hackathon submission.
+
+---
+
+# 📄 License
+
+This project is open-source and available under the MIT License.
