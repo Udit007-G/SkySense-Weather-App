@@ -3,8 +3,7 @@ import Groq from "groq-sdk";
 
 const groq = new Groq({
 
-apiKey:
-import.meta.env.VITE_GROQ_API_KEY,
+apiKey: import.meta.env.VITE_GROQ_API_KEY,
 
 dangerouslyAllowBrowser:true
 
@@ -17,43 +16,49 @@ export async function getWeatherAdvice(weather){
 
 const prompt = `
 
-You are a helpful weather assistant.
+You are SkySense AI, an intelligent weather assistant.
 
-Give short practical advice based on this weather:
+Analyze the weather data and return ONLY valid JSON.
 
-City:
-${weather.name}
+Do not add markdown.
+Do not add explanations.
+
+Return exactly this format:
+
+{
+"summary":"",
+"clothing":"",
+"activity":"",
+"health":"",
+"alert":""
+}
+
+
+Weather data:
+
+City: ${weather.name}
 
 Temperature:
-${weather.main.temp}°C
+${weather.main.temp} °C
 
 Feels like:
-${weather.main.feels_like}°C
-
-Condition:
-${weather.weather[0].description}
+${weather.main.feels_like} °C
 
 Humidity:
 ${weather.main.humidity}%
 
+Wind:
+${weather.wind.speed}
 
-Give response in this format and reply nothing extra:
+Condition:
+${weather.weather[0].description}
 
-👕 What to wear:
-(one sentence)
-
-🏃 Outdoor activity:
-(one sentence)
-
-💧 Health tip:
-(one sentence)
 
 `;
 
 
 
 const response = await groq.chat.completions.create({
-
 
 messages:[
 
@@ -64,14 +69,25 @@ content:prompt
 
 ],
 
-
 model:"llama-3.1-8b-instant",
-
 
 });
 
 
-return response.choices[0].message.content;
+const aiText =
+response.choices[0].message.content;
+
+
+const cleaned =
+aiText.replace(
+/```json|```/g,
+""
+)
+.trim();
+
+
+
+return JSON.parse(cleaned);
 
 
 }
