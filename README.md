@@ -1,6 +1,6 @@
 # 🌤 SkySense AI — Intelligent Weather Assistant
 
-![SkySense AI Banner](Images/banner_image.jpeg)
+![SkySense AI Banner](./Images/banner_image.jpeg)
 
 ## 🚀 Overview
 
@@ -211,17 +211,17 @@ The project requires:
 
 ## Main Dashboard
 
-![Dashboard](Images/screenshots/dashboard.png)
+![Dashboard](./Images/screenshots/dashboard.png)
 
 
 ## AI Weather Assistant
 
-![AI Panel](Images/screenshots/ai-panel.png)
+![AI Panel](./Images/screenshots/ai-panel.png)
 
 
 ## City Comparison
 
-![Comparison](Images/screenshots/comparison.png)
+![Comparison](./Images/screenshots/comparison.png)
 
 ---
 
